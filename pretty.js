@@ -86,8 +86,8 @@ function pretty(opts) {
         }
         line += value.pid + ' on ' + value.hostname + ')'
         line += ': '
-        if (value.msg) {
-            line += ctx.cyan(value.msg)
+        if (value.msg || value.message) {
+            line += ctx.cyan(value.msg || value.message)
         }
         line += '\n'
         if (value.type === 'Error') {
