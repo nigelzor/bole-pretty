@@ -1,0 +1,38 @@
+{
+  "name": "bole-pretty",
+  "version": "1.0.0",
+  "description": "Pretty print bole logging output",
+  "main": "pretty.js",
+  "bin": {
+    "bole-pretty": "./pretty.js"
+  },
+  "scripts": {
+    "test": "standard && tap --no-cov test/*test.js",
+    "ci": "standard && tap --cov test/*test.js"
+  },
+  "precommit": "test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordstrom/bole-pretty.git"
+  },
+  "keywords": [
+    "fast",
+    "logger",
+    "stream",
+    "json",
+    "pretty",
+    "readable",
+    "bole"
+  ],
+  "author": "Andy Day",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nordstrom/bole-pretty/issues"
+  },
+  "homepage": "https://github.com/nordstrom/bole-pretty#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "fast-json-parse": "^1.0.0",
+    "split2": "^2.0.1"
+  }
+}
