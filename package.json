@@ -6,10 +6,7 @@
   "bin": {
     "bole-pretty": "./pretty.js"
   },
-  "scripts": {
-    "test": "standard && tap --no-cov test/*test.js",
-    "ci": "standard && tap --cov test/*test.js"
-  },
+  "scripts": {},
   "precommit": "test",
   "repository": {
     "type": "git",
