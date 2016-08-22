@@ -11,7 +11,7 @@ var standardKeys = [
     'hostname',
     'name',
     'level',
-    'msg',
+    'message',
     'time',
     'v'
 ]
