@@ -1,0 +1,21 @@
+
+  [0m[37m[1m[4mbole-pretty[22m[39m[0m
+
+  [0mTo prettify logs, simply pipe a log file through [33mbole-pretty[39m:[0m
+
+     [33mcat log | bole-pretty[39m
+
+  [0mTo convert Epoch timestamps to ISO timestamps use the [33m-t[39m flag[0m
+
+     [33mcat log | bole-pretty -t[39m
+
+  To flip level and time/date in standard output use the [33m-l[39m flag[0m
+
+     [33mcat log | bole-pretty -l[39m
+
+  [36m[1mFlags[22m[39m
+  [0m-h | --help      Display Help
+  -v | --version   Display Version
+  -t               Convert Epoch timestamps to ISO
+  -l               Flip level and date
+
