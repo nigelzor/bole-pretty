@@ -42,6 +42,7 @@ function pretty (opts) {
   var formatter = opts && opts.formatter
   var levelFirst = opts && opts.levelFirst
   var forceColor = opts && opts.forceColor
+  var hideHost = opts && opts.hideHost
 
   var stream = split(mapLine)
   var ctx
@@ -94,8 +95,11 @@ function pretty (opts) {
     if (value.name) {
       line += value.name + '/'
     }
-    line += value.pid + ' on ' + value.hostname + ')'
-    line += ': '
+    line += value.pid
+    if (!hideHost) {
+      line += ' on ' + value.hostname
+    }
+    line += '): '
     if (value.msg || value.message) {
       line += ctx.cyan(value.msg || value.message)
     }
@@ -143,7 +147,8 @@ if (require.main === module) {
     process.stdin.pipe(pretty({
       timeTransOnly: arg('-t'),
       levelFirst: arg('-l'),
-      forceColor: arg('-c')
+      forceColor: arg('-c'),
+      hideHost: arg('--no-host')
     })).pipe(process.stdout)
   }
 }

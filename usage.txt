@@ -18,4 +18,5 @@
   -v | --version   Display Version
   -t               Convert Epoch timestamps to ISO
   -l               Flip level and date
+  --no-host        Don't show hostname from logs
 
