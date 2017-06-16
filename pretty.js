@@ -92,6 +92,8 @@ function pretty(opts) {
         line += '\n'
         if (value.type === 'Error') {
             line += '    ' + withSpaces(value.stack) + '\n'
+        } else if (value.err && value.err.stack) {
+          line += '    ' + withSpaces(value.err.stack) + '\n'
         } else {
             line += filter(value)
         }
