@@ -1,6 +1,6 @@
 # bole-pretty
 
-Pretty print bole logging output.
+A fork of [pino](https://github.com/pinojs/pino)'s pretty-printer, adapted for [bole](https://github.com/rvagg/bole)'s json output.
 
 ## Usage
 

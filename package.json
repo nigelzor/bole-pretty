@@ -6,7 +6,10 @@
   "bin": {
     "bole-pretty": "./pretty.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "standard | snazzy && tap --no-cov test/*test.js",
+    "ci": "standard | snazzy && tap --cov test/*test.js"
+  },
   "precommit": "test",
   "repository": {
     "type": "git",
@@ -31,5 +34,11 @@
     "chalk": "^1.1.1",
     "fast-json-parse": "^1.0.0",
     "split2": "^2.0.1"
+  },
+  "devDependencies": {
+    "bole": "^3.0.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
+    "tap": "^10.3.4"
   }
 }
