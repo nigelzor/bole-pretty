@@ -69,7 +69,7 @@ function pretty(opts) {
         var parsed = new Parse(line)
         var value = parsed.value
 
-        if (parsed.err) {
+        if (parsed.err || !value.time || typeof value.level !== 'string') {
             // pass through
             return line + '\n'
         }
